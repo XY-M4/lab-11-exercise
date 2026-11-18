@@ -1,2 +1,3 @@
-2a.
-2b.
+2a. Sprite batching is expected to achieve higher FPS than non-batched rendering because it combines thousands of sprites into a single draw call, reducing CPU overhead. Non-batched rendering requires a separate draw call for each sprite, which can decrease performance. Actual FPS values could not be recorded because the programs were not run.
+
+2b. Sprite depth can be implemented using OpenGL's depth buffer by enabling `GL_DEPTH_TEST` and assigning different Z coordinates to sprites in the vertex shader. The GPU automatically compares fragment depths and determines which sprite is closer to the camera, allowing sprites to overlap correctly without manually sorting them.
